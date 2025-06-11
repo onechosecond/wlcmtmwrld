@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script type="module">
+  import { fairyDustCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
+
+  new fairyDustCursor();
+</script>
+
+	<title>trinket box</title>
+	<style>
+		body{background-color: #CCCCFF;
+				  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+        cursor: url(doggy.gif) 2 2, auto;}
+		h1,h2, p,footer, .wrap{margin: 0px;}
+		p{border-color: black; border-style: groove;
+			border-width: medium;
+      background-image: url();
+      background-size: 800px;}
+    h3{font-family: "Times New Roman", Georgia, serif;}
+		h2{border-style: groove;
+			padding: 5px 5px 5px 5px;
+			text-align: center}
+    h1{border: 25px solid lightgray;}
+		.wrap{width: 1120px; height: 604px;
+			margin: auto; border-color: black; border-style: ridge;
+			border-width: thick; padding: 10px 10px 10px 10px;}
+		.scrnLeft{width: 312px; height: 600px; float: left; display: flex;}
+		.scrnLeft-1{width: 262px; height: 600px; border-color: black; border-style: groove;
+			text-align: center;
+			background-color: fuchsia;}
+		.scrnLeft-2{position: relative;
+			left: 52px;
+			border-color: blue; border-width: 2px; border-style: dotted; width: 200px; background-color: #BABABA;}
+		.scrnRight{width: 800px; height: 600px; float: right; overflow: auto;}
+
+		@keyframes color {
+			from {background-color: fuchsia;}
+			to{background-color: lime;}}
+		.change{animation-name: color;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;}
+        .sticker1{position: relative;
+            left: 0px; 
+            top: 475px;
+            width: 800px;
+            z-index: -1;}
+        .sticker1:hover{animation: vibration 0.07s infinite;}
+        @keyframes vibration {
+      from {
+        transform: rotate(5deg);
+      }
+      to {
+        transform: rotate(-5deg);
+      }
+    }
+        #fr1 { border-image : url("fr1.png")625 round;}
+        #fr1:hover{background-color: blue;}
+        #fr2 { border-image : url("fr1.png")275 round;}
+        #fr2:hover{background-color: blue;}
+        #fr3 { border-image : url("fr2.png")625 round;}
+        #fr3:hover{background-color: blue;}
+        #fr4 { border-image : url("fr2.png")275 round;}
+        #fr4:hover{background-color: blue;}
+        #fr5 { border-image : url("fr3.png")625 round;}
+        #fr5:hover{background-color: blue;}
+        #fr6 { border-image : url("fr3.png")275 round;}
+        #fr6:hover{background-color: blue;} 
+        .footfoot{text-align: center;
+        			color: blue;
+        			font-size: 0.7rem;
+        			padding-top: 42px;
+        			padding-bottom: 32px;
+        			line-height: 1.5;
+              font-family: "Times New Roman", Georgia, serif;}
+        .abouttxt{text-align: left;
+              color: blue;
+              font-size: 0.9rem;
+              padding-left: 25px;
+              padding-top: 0px; 
+              padding-bottom: 0px;
+              line-height: 1.5;
+              font-family: "Times New Roman", Georgia, serif;}
+        .abouttxt:hover{
+        transform: rotate(-5deg);}
+        .abouttxt2{text-align: left;
+        			color: blue;
+        			font-size: 1.5rem;
+              padding-left: 25px;
+        			padding-top: 0px;
+        			padding-bottom: 0px;
+        			line-height: 1.5;}
+        .abouttxt2:hover{
+        transform: rotate(5deg); color: white; background-color: blue; border-color: white;}
+		.flow-text {
+	  display: flex;
+      flex: 0 0 auto;
+      white-space: nowrap;
+      overflow: hidden;
+      transition: 0.3s;
+      font-size: 2.5rem;
+      font-weight:bold;
+      color: #9D9993;
+      font-family: "Times New Roman", Georgia, serif;
+  }
+  .flow-text:hover {
+    color: yellow;
+  }
+  .flow-text:hover .flow-wrap {
+    animation-play-state: paused;
+    cursor: pointer;
+  }
+  .flow-wrap {
+    animation: textLoop 10s linear infinite;
+    padding-right: 1.4881vw;
+  }
+  
+  @keyframes textLoop {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+  .flow-containerTop{padding-top: 5px; padding-bottom: 15px;}
+   .flow-containerBttm{padding-top: 15px; padding-bottom: 15px;}
+   .mypic{width: 252px;
+   		padding-top: 4px;}
+      a:link {color : blue;
+  text-decoration: none;}
+    a:visited {color : blue;
+  text-decoration: none;}
+      
+      .container {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+.images {
+  width: 100%;
+  height: auto;
+}
+.images img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (min-width: 640px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    grid-auto-flow: row dense;
+  }
+  .imageFlex1 {
+    display: grid;
+    row-gap: 20px;
+  }
+  .imageFlex2 {
+    display: grid;
+    row-gap: 20px;
+  }
+  .imageFlex3 {
+    display: grid;
+    row-gap: 20px;
+  }
+}
+	</style>
+</head>
+<body>
+	<div class="flow-containerTop">
+                <div class="flow-text">
+                    <div class="flow-wrap">&#x2660; &#x2663; &#x2665; &#x2666; &#xFF61;&#xB0;&#xB7; . welcome to my world &#x1DBB; &#x1D5D3; &#x10C01; .&#x141F;&#xFF61;&#xB7; .</div>
+                    <div class="flow-wrap">&#x2660; &#x2663; &#x2665; &#x2666; &#xFF61;&#xB0;&#xB7; . welcome to my world &#x1DBB; &#x1D5D3; &#x10C01; .&#x141F;&#xFF61;&#xB7; .</div>
+                    <div class="flow-wrap">&#x2660; &#x2663; &#x2665; &#x2666; &#xFF61;&#xB0;&#xB7; . welcome to my world &#x1DBB; &#x1D5D3; &#x10C01; .&#x141F;&#xFF61;&#xB7; .</div>
+                    <div class="flow-wrap">&#x2660; &#x2663; &#x2665; &#x2666; &#xFF61;&#xB0;&#xB7; . welcome to my world &#x1DBB; &#x1D5D3; &#x10C01; .&#x141F;&#xFF61;&#xB7; .</div> 
+                </div>
+            </div>
+	<div class="wrap">		
+		<div class="scrnLeft">
+			<div class="scrnLeft-1">
+				<img src="mypic.png" class="mypic">
+				<h3 class="abouttxt2 scrnLeft-2"onclick="location.href='index2.html'">↩ back</h3>
+        <h3 class="abouttxt scrnLeft-2"> <br>潤承이 수집한<br>쓸모없는 귀염둥이들<br> <br> 
+			</div>
+		</div>
+		<div class="scrnRight">
+ <div class="container">
+    <div class="images">
+      <div class="imageFlex1">
+        <h1 id="fr1"><img src="thing7.png"></h1>
+        <h1 id="fr2"><img src="thing3.png"></h1>
+        <h1 id="fr3"><img src="thing11.png"></h1>
+        <h1 id="fr4"><img src="thing2.png"></h1>
+        <h1 id="fr5"><img src="thing5.png"></h1>
+        <h1 id="fr6"><img src="thing14.png"></h1>
+        <h1 id="fr1"><img src="thing24.png"></h1>
+        <h1 id="fr2"><img src="thing19.png"></h1>
+        <h1 id="fr3"><img src="thing38.png"></h1>
+        <h1 id="fr4"><img src="thing23.png"></h1>
+        <h1 id="fr5"><img src="thing33.png"></h1>
+      </div>
+    </div>
+    <div class="images">
+      <div class="imageFlex2">
+        <h1 id="fr6"><img src="thing8.png"></h1>
+        <h1 id="fr5"><img src="thing4.png"></h1>
+        <h1 id="fr4"><img src="thing10.png"></h1>
+        <h1 id="fr3"><img src="thing15.png"></h1>
+        <h1 id="fr2"><img src="thing12.png"></h1>
+        <h1 id="fr1"><img src="thing25.png"></h1>
+        <h1 id="fr6"><img src="thing21.png"></h1>
+        <h1 id="fr5"><img src="thing26.png"></h1>
+        <h1 id="fr4"><img src="thing35.png"></h1>
+        <h1 id="fr3"><img src="thing29.png"></h1>
+        <h1 id="fr2"><img src="thing31.png"></h1>
+      </div>
+    </div>
+    <div class="images">
+      <div class="imageFlex3">
+        <h1 id="fr3"><img src="thing13.png"></h1>
+        <h1 id="fr4"><img src="thing6.png"></h1>
+        <h1 id="fr5"><img src="thing9.png"></h1>
+        <h1 id="fr6"><img src="thing1.png"></h1>
+        <h1 id="fr1"><img src="thing16.png"></h1>
+        <h1 id="fr2"><img src="thing17.png"></h1>
+        <h1 id="fr3"><img src="thing28.png"></h1>
+        <h1 id="fr4"><img src="thing34.png"></h1>
+        <h1 id="fr5"><img src="thing36.png"></h1>
+        <h1 id="fr6"><img src="thing32.png"></h1>
+        <h1 id="fr1"><img src="thing22.png"></h1>
+        <h1 id="fr2"><img src="thing37.png"></h1>
+        <h1 id="fr3"><img src="thing20.png"></h1>
+      </div>
+    </div>
+  </div>
+		</div>
+	</div>
+	<footer class="footfoot">
+		SEOUL, KOREA<br>2025 © brainrotmilk. ALL RIGHTS RESERVED.
+	</footer>
+	<div class="flow-containerBttm">
+                <div class="flow-text">
+                    <div class="flow-wrap">&#x2660; &#x2663; &#x2665; &#x2666; &#xFF61;&#xB0;&#xB7; . welcome to my world &#x1DBB; &#x1D5D3; &#x10C01; .&#x141F;&#xFF61;&#xB7; .</div>
+                    <div class="flow-wrap">&#x2660; &#x2663; &#x2665; &#x2666; &#xFF61;&#xB0;&#xB7; . welcome to my world &#x1DBB; &#x1D5D3; &#x10C01; .&#x141F;&#xFF61;&#xB7; .</div>
+                    <div class="flow-wrap">&#x2660; &#x2663; &#x2665; &#x2666; &#xFF61;&#xB0;&#xB7; . welcome to my world &#x1DBB; &#x1D5D3; &#x10C01; .&#x141F;&#xFF61;&#xB7; .</div>
+                    <div class="flow-wrap">&#x2660; &#x2663; &#x2665; &#x2666; &#xFF61;&#xB0;&#xB7; . welcome to my world &#x1DBB; &#x1D5D3; &#x10C01; .&#x141F;&#xFF61;&#xB7; .</div> 
+                </div>
+            </div>
+</body>
+</html>

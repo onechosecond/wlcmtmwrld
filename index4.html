@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script type="module">
+  import { rainbowCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
+
+  new rainbowCursor();
+</script> 
+
+
+	<title>profile</title>
+	<style>
+		body{background-color: #FFFFFF;
+				  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+          cursor: url(doggy.gif) 2 2, auto;}
+		h1,h2, p,footer, .wrap{margin: 0px;}
+		p{font-family: "Times New Roman", Georgia, serif;}
+		h2{font-family: "Times New Roman", Georgia, serif;
+			padding: 5px 5px 5px 5px;
+			text-align: center;}
+    h3{font-family: "Times New Roman", Georgia, serif;}
+		h1{width: 1140px; height: 60px; color: blue; text-align: center; padding-top: 15px; background-image: url(sky.jpg); margin: auto;
+		background-size: 1140px;
+	border-color: black; border-style: ridge;
+			border-width: thick;}
+		.wrap{width: 1120px; height: 604px;
+			margin: auto; border-color: black; border-style: ridge;
+			border-width: thick; padding: 10px 10px 10px 10px;}
+		.scrnLeft{width: 312px; height: 600px; float: left; display: flex;}
+		.scrnLeft-1{width: 262px; height: 600px; border-color: black; border-style: groove;
+			text-align: center;
+			background-color: #CCCCFF;}
+		.scrnLeft-2{position: relative;
+			left: 52px;
+			border-color: blue; border-width: 2px; border-style: dotted; width: 200px; background-color: #BABABA;}
+		.scrnRight{width: 800px; height: 600px; float: right; overflow: auto;}
+		@keyframes color {
+			from {background-color: fuchsia;}
+			to{background-color: lime;}}
+		.change{animation-name: color;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;}
+		.bttnCrd{
+			font-size: 1rem;
+			position: absolute;
+            left: 1518px; 
+            top: 174px;}
+		.bttnProfile{background-color: transparent;
+			text-shadow: 1px 1px 1px #000;
+			color: yellow;
+			font-size: 1.5rem;
+			position: relative;
+            left: 437px; 
+            top: 170px;}
+        .bttnInsta{background-color: transparent;
+        	text-shadow: 1px 1px 1px #000;
+			color: yellow;
+			font-size: 1.5rem;
+			position: relative;
+            left: 80px; 
+            top: 510px;}
+        .bttnWorks{background-color: transparent;
+        	text-shadow: 1px 1px 1px #000;
+			color: yellow;
+			font-size: 1.5rem;
+			position: relative;
+            left: 60px; 
+            top: 200px;}
+        .bttnBox{background-color: transparent;
+        	text-shadow: 1px 1px 1px #000;
+			color: yellow;
+			font-size: 1.5rem;
+			position: relative;
+            left: 175px; 
+            top: 475px;}
+        .bttnPlaylist{background-color: transparent;
+        	text-shadow: 1px 1px 1px #000;
+			color: yellow;
+			font-size: 1.5rem;
+			position: relative;
+            left: 10px; 
+            top: 425px;}
+        .bttnContact{background-color: transparent;
+        	text-shadow: 1px 1px 1px #000;
+			color: yellow;
+			font-size: 1.5rem;
+			position: relative;
+            left: 20px; 
+            top: 400px;}
+        .sticker1{position: absolute;
+            left: 100px; 
+            top: 637px;
+            width: 200px;
+            z-index: 999;}
+        .sticker1:hover{
+          animation: vibration 0.07s infinite;
+          }
+        @keyframes vibration {
+      from {
+        transform: rotate(1.5deg);
+      }
+      to {
+        transform: rotate(-1deg);
+      }
+    }
+        .sticker2{position: absolute;
+            left: 105px; 
+            top: 0px;
+            width: 300px;
+            z-index: 999;}
+        .footfoot{text-align: center;
+        			color: blue;
+        			font-size: 0.7rem;
+        			padding-top: 42px;
+        			padding-bottom: 32px;
+        			line-height: 1.5;
+              font-family: "Times New Roman", Georgia, serif;}
+        .abouttxt{text-align: left;
+              color: blue;
+              font-size: 0.8rem;
+              padding-left: 25px;
+              padding-top: 0px;
+              padding-bottom: 0px;
+              line-height: 1.5;
+              font-family: "Times New Roman", Georgia, serif;}
+        .abouttxt:hover{
+        transform: rotate(-5deg);}
+        .abouttxt2{text-align: left;
+        			color: blue;
+        			font-size: 1.5rem;
+              padding-left: 25px;
+        			padding-top: 0px;
+        			padding-bottom: 0px;
+        			line-height: 1.5;}
+        .abouttxt2:hover{
+        transform: rotate(5deg); color: white; background-color: blue; border-color: white;}
+        .banner{position: relative;
+            right: 0px; 
+            top: 0px;
+            width: 88px;}
+        .banbox{position: absolute;
+          width: 200px;
+          height: 700px;
+          float: right;
+          top: 100px;
+          right: 37px;
+          margin: auto;
+          text-align: center;}
+        .mybox{position: relative;
+          width: 150px;
+          height: 1544px; 
+          float: left;
+          margin: auto;
+          text-align: center;}
+          .myshot{position: relative;
+            right: 0px; 
+            top: 0px;
+            text-align: center;
+          width: 150px;}
+          .myshot:hover{
+        transform: rotate(-5deg);}
+
+        .cardbox{position: relative;
+          width: 540px;
+          padding: 10px;
+          float: right;
+          margin: auto;
+          text-align: center;
+          background-color: black;
+          border: 30px dotted yellow;}
+        .cardy{position: relative;
+          right: 50px; 
+          top: 0px;
+          margin: 10px;
+          text-align: left;
+          font-size: 1rem;
+          line-height: 2;}
+        .cardytxt1{color: fuchsia;}
+        .cardytxt2{color: white;
+          text-decoration-line: underline;
+          text-decoration-style: wavy;
+          text-decoration-color: fuchsia;
+          text-underline-position : under;}
+        .cardpic{position: relative;
+          left: 0px; 
+          top: 0px;
+          margin: auto;
+          text-align: center;
+          border-color: blue; border-width: 2px; border-style: dotted;
+          border-radius: 20px;}
+        .cardpic:hover{
+        transform: rotate(-5deg);}
+
+        .justbox{position: relative;
+          width: 600px;
+          padding: 10px;
+          float: right;
+          margin: auto;
+          text-align: center;}
+        .cardpad{padding-top: 37px;
+          padding-bottom: 37px;
+          background-image: url(stairs.JPG);
+          background-attachment: fixed;}
+
+          .scndbox{position: relative;
+          width: 580px;
+          padding: 10px;
+          float: right;
+          margin: auto;
+          text-align: center;
+          background-color: green;
+          border: 10px double red;}
+          .scndy{position: relative;
+          right: 0px; 
+          top: 0px;
+          margin: auto;
+          text-align: left;
+          color: white;
+          font-size: 1rem;
+          line-height: 2;}
+          .scndy2{position: relative;
+          margin: auto;
+          text-align: center;
+          font-size: 1.3rem;
+          line-height: 2;
+          color: yellow;}
+          .clocky{width: 250px; text-align: cent}
+          .clocky:hover{
+        transform: rotate(5deg);}
+
+        .ffbox{position: relative;
+          width: 600px;
+          padding: 10px;
+          float: right;
+          margin: auto;
+          text-align: center;
+          background-color: black;}
+        .fourcard{position: relative;
+            right: 0px; 
+            top: 0px;
+            width: 215px;
+            height: 200px;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+            font-size: 1rem;
+            line-height: 2;
+            border-radius: 10px;
+            border-color: blue; border-width: 2px; border-style: dotted;}
+        .fftitle{color: white;}
+        .ffbox1{color: blue;
+            background-color: blue;
+            border-radius: 10px;}
+        .ffbox1:hover{
+        transform: color: white; background-color: black;}
+        .ffbox2{color: orange;
+            background-color: orange;
+            border-radius: 10px;}
+        .ffbox2:hover{
+        transform: color: white; background-color: black;}
+        .ffbox3{color: fuchsia;
+            background-color: fuchsia;
+            border-radius: 10px;}
+        .ffbox3:hover{
+        transform: color: white; background-color: black;}
+        .ffbox4{color: lime;
+            background-color: lime;
+            border-radius: 10px;}
+        .ffbox4:hover{
+        transform: color: white; background-color: black;}
+
+        .movbox{position: relative;
+          width: 600px;
+          padding: 10px;
+          float: right;
+          margin: auto;
+          text-align: center;
+          background-color: black;}
+        .movcard{position: relative;
+            right: 0px; 
+            top: 0px;
+            width: 150px;
+            height: 200px;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+            font-size: 1rem;
+            line-height: 2;
+            background-color: white;
+            border-color: blue; border-width: 5px; border-style: dotted;}
+        .movtitle{color: blue;}
+        .movbox1{
+            background-color: blue;}
+
+		.flow-text {
+	  display: flex;
+      flex: 0 0 auto;
+      white-space: nowrap;
+      overflow: hidden;
+      transition: 0.3s;
+      font-size: 2.5rem;
+      font-weight:bold;
+      color: #9D9993;
+      font-family: "Times New Roman", Georgia, serif;
+  }
+  .flow-text:hover {
+    color: yellow;
+  }
+  .flow-text:hover .flow-wrap {
+    animation-play-state: paused;
+    cursor: pointer;
+  }
+  .flow-wrap {
+    animation: textLoop 10s linear infinite;
+    padding-right: 1.4881vw;
+  }
+  
+  @keyframes textLoop {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+  .flow-containerTop{padding-top: 5px; padding-bottom: 15px;}
+   .flow-containerBttm{padding-top: 15px; padding-bottom: 15px;}
+   .mypic{width: 252px;
+   		padding-top: 4px;}
+      a:link {color : blue;
+  text-decoration: none;}
+    a:visited {color : blue;
+  text-decoration: none;}
+
+      .flex{display: flex; flex-wrap: wrap;}
+      .w175{width: 175px;}
+      
+        .smtxt{font-size: 0.9rem;
+          line-height: 1.5;
+          text-align: left;
+          padding-left: 14px;}
+        .bgtxt{font-size: 1.3rem;}
+        .transparent{visibility: hidden;}
+        .stBut{background-color: black;
+          color: white;}
+	</style>
+</head>
+<body>
+	<div class="flow-containerTop">
+                <div class="flow-text">
+                    <div class="flow-wrap">&#x2660; &#x2663; &#x2665; &#x2666; &#xFF61;&#xB0;&#xB7; . welcome to my world &#x1DBB; &#x1D5D3; &#x10C01; .&#x141F;&#xFF61;&#xB7; .</div>
+                    <div class="flow-wrap">&#x2660; &#x2663; &#x2665; &#x2666; &#xFF61;&#xB0;&#xB7; . welcome to my world &#x1DBB; &#x1D5D3; &#x10C01; .&#x141F;&#xFF61;&#xB7; .</div>
+                    <div class="flow-wrap">&#x2660; &#x2663; &#x2665; &#x2666; &#xFF61;&#xB0;&#xB7; . welcome to my world &#x1DBB; &#x1D5D3; &#x10C01; .&#x141F;&#xFF61;&#xB7; .</div>
+                    <div class="flow-wrap">&#x2660; &#x2663; &#x2665; &#x2666; &#xFF61;&#xB0;&#xB7; . welcome to my world &#x1DBB; &#x1D5D3; &#x10C01; .&#x141F;&#xFF61;&#xB7; .</div> 
+                </div>
+            </div>
+	<div class="wrap">		
+		<div class="scrnLeft">
+			<div class="scrnLeft-1">
+				<img src="mypic.png" class="mypic">
+				<h3 class="abouttxt2 scrnLeft-2"onclick="location.href='index2.html'">↩ back</h3>
+        <h3 class="abouttxt scrnLeft-2"> <br>潤承의 세계에서 모라토리엄은<br>규칙이자 질서다.<br>자기 자신을 발견하기 위해<br>제멋대로 그림을 그리며<br>어른이 되길 유예하고 있다.<br> <br></h3>
+			</div>
+		</div>
+		<div class="scrnRight">
+      <div class="mybox">
+      <img src="pz1.png" class="myshot">
+      <img src="pz3.png" class="myshot">
+      <img src="pz4.png" class="myshot">
+      <img src="pz2.png" class="myshot">
+      <img src="pz5.png" class="myshot">
+      <img src="pz6.png" class="myshot">
+      <img src="pz8.png" class="myshot">
+      <img src="pz9.png" class="myshot">
+      <img src="pz7.png" class="myshot">
+      <img src="pz10.png" class="myshot"> 
+      </div>
+      <div class="justbox cardpad">
+      </div>
+      <div class="cardbox flex">
+        <img src="myface.JPG" class="w175 cardpic">
+        <h2 class="cardy">
+        </h2>
+        <h2 class="cardy">
+        </h2>
+        <h2 class="cardy cardytxt1">
+          이름<br>신장<br>혈액형<br>별자리<br>성격
+        </h2>
+        <h2 class="cardy cardytxt2">
+          윤승<br>5.019685 ft<br>B<br>천칭자리<br>안 좋음 
+        </h2>
+      </div>
+      <div class="justbox cardpad">
+      </div>
+      <div class="scndbox flex">
+        <h2 class="scndy2">
+          저는 학교 오는 길에 이런 노래를 듣는답니다…
+        </h2>
+        <h2 class="scndy">
+        <img src="clock.png" class="clocky">
+        </h2>
+        <h2 class="scndy">
+          <button id="stopp" class="stBut">stop</button>
+          <button class="transparent">stop</button>
+          <button id="mu1But">Tout va bien</button>
+          <audio id="mu1Snd" src="music1.mp3"></audio>
+          <button id="mu2But">Love Sign</button>
+          <audio id="mu2Snd" src="music2.mp3"></audio>
+          <button id="mu3But">Wonder2</button>
+          <audio id="mu3Snd" src="music3.mp3"></audio>
+          <button id="mu4But">ハミングがきこえる</button>
+          <audio id="mu4Snd" src="music4.mp3"></audio>
+          <button id="mu5But">Just A Gigolo</button>
+          <audio id="mu5Snd" src="music5.mp3"></audio>
+        </h2>
+      </div>
+
+<script type="text/javascript">
+  mu1But.onclick = function(){
+    mu1Snd.play();
+    mu2Snd.pause();
+    mu3Snd.pause();
+    mu4Snd.pause();
+    mu5Snd.pause();
+  }
+  mu2But.onclick = function(){
+    mu2Snd.play();
+    mu1Snd.pause();
+    mu3Snd.pause();
+    mu4Snd.pause();
+    mu5Snd.pause();
+  }
+  mu3But.onclick = function(){
+    mu3Snd.play();
+    mu2Snd.pause();
+    mu1Snd.pause();
+    mu4Snd.pause();
+    mu5Snd.pause();
+  }
+  mu4But.onclick = function(){
+    mu4Snd.play();
+    mu2Snd.pause();
+    mu3Snd.pause();
+    mu1Snd.pause();
+    mu5Snd.pause();
+  }
+  mu5But.onclick = function(){
+    mu5Snd.play();
+    mu2Snd.pause();
+    mu3Snd.pause();
+    mu4Snd.pause();
+    mu1Snd.pause(); 
+  }
+  stopp.onclick = function(){
+    mu1Snd.pause();
+    mu2Snd.pause();
+    mu3Snd.pause();
+    mu4Snd.pause();
+    mu5Snd.pause();
+  }
+</script>
+
+      <div class="justbox cardpad">
+      </div>
+      <div class="ffbox flex">
+        <h2 class="fourcard bgtxt fftitle">
+          좋아하는 계절
+          <p class="smtxt ffbox1">
+            <br>여름<br><br><br><br>습한 날씨 좋아함<br><br>
+          </p>
+        </h2>
+        <h2 class="fourcard bgtxt fftitle">
+          싫어하는 음식
+          <p class="smtxt ffbox2">
+            <br>비린내에 약해서<br><br>해산물, 날고기, 선지, 푸딩,<br>수플레 팬케이크<br><br>이런거 전부 싫어함
+          </p> 
+        </h2>
+        <h2 class="fourcard bgtxt fftitle">
+          자신있는 운동
+          <p class="smtxt ffbox3">
+            <br>맨몸운동 좋아함<br>특별한 기구나 시설이 필요한 운동하면 답답함<br>예전에 필라테스 등록했다가 매달려있는게 바보같아서<br>몇 주만에 관둠
+          </p> 
+        </h2>
+        <h2 class="fourcard bgtxt fftitle">
+          출몰지역
+          <p class="smtxt ffbox4">
+            <br>강의 북쪽, 서울 구도심 선호<br><br>을지로, 동대문, 종로,<br>합정, 망원, 이태원<br><br> 등지에 주로 출몰
+          </p>
+        </h2>
+      </div>
+      <div class="justbox cardpad">
+        </div>
+      
+
+
+		</div>
+	</div>
+	<footer class="footfoot">
+		SEOUL, KOREA<br>2025 © brainrotmilk. ALL RIGHTS RESERVED.
+	</footer>
+  <img title="얘는 우리집 앞 골목에 사는 길냥이다. 롯데월드 머리띠를 쓰고 있는게 특징이다." src="kitty.png" class="sticker1">
+  <div class="banbox">
+  <img src="https://anlucas.neocities.org/2cows.gif" class="banner">
+  <img src="https://anlucas.neocities.org/263gggk.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/mobiles.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/blink-0.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/absfree.gif" class="banner">
+  <img src="https://anlucas.neocities.org/winmedia.gif" class="banner">
+  <img src="https://anlucas.neocities.org/send_this_page.gif" class="banner">
+  <img src="https://anlucas.neocities.org/freelist.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/nocookie.gif" class="banner">
+  <img src="https://anlucas.neocities.org/classicgaming.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/finger.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/gticon.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/cssdif.gif" class="banner">
+  <img src="https://anlucas.neocities.org/Ebay.gif" class="banner">
+ <img src="https://anlucas.neocities.org/nukeieani.gif" class="banner">
+  <img src="https://anlucas.neocities.org/hatemac.jpg" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/xp.gif" class="banner">
+  <img src="https://anlucas.neocities.org/bookmark_this_page.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/milktea.gif" class="banner">
+  <img src="https://owlman.neocities.org/OwlMan/Banners/98plusani.gif" class="banner">
+  <img src="https://anlucas.neocities.org/office97.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/nowebp.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/chrmevil.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/hasmile.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/duvigneaud_net.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/folder2.gif" class="banner">
+  <img src="https://anlucas.neocities.org/getacomp.jpg" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/gaywebring.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/diva.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/freakbutton.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/goblins.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/icw_ckm.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/iccsania.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/new-tab.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/slash.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/questions-comments.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/hurtsnow.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/imhigh.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/rainbow_bev.gif" class="banner">
+</div>
+	<div class="flow-containerBttm">
+                <div class="flow-text">
+                    <div class="flow-wrap">&#x2660; &#x2663; &#x2665; &#x2666; &#xFF61;&#xB0;&#xB7; . welcome to my world &#x1DBB; &#x1D5D3; &#x10C01; .&#x141F;&#xFF61;&#xB7; .</div>
+                    <div class="flow-wrap">&#x2660; &#x2663; &#x2665; &#x2666; &#xFF61;&#xB0;&#xB7; . welcome to my world &#x1DBB; &#x1D5D3; &#x10C01; .&#x141F;&#xFF61;&#xB7; .</div>
+                    <div class="flow-wrap">&#x2660; &#x2663; &#x2665; &#x2666; &#xFF61;&#xB0;&#xB7; . welcome to my world &#x1DBB; &#x1D5D3; &#x10C01; .&#x141F;&#xFF61;&#xB7; .</div>
+                    <div class="flow-wrap">&#x2660; &#x2663; &#x2665; &#x2666; &#xFF61;&#xB0;&#xB7; . welcome to my world &#x1DBB; &#x1D5D3; &#x10C01; .&#x141F;&#xFF61;&#xB7; .</div> 
+                </div>
+            </div>
+</body>
+</html>

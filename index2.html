@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script type="module">
+  import { clockCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
+
+  new clockCursor();
+</script>
+
+	<title>welcome to my world</title>
+	<style>
+		label .cardWrapper {
+  position: absolute;
+  left: 87px;
+  top: 175px;
+  height: 14vmin;
+  width: calc(14vmin / 1.4);
+  background-color: blue;
+  background-image: repeating-linear-gradient(
+      120deg,
+      rgba(255, 0, 0, 0.5),
+      rgba(255, 0, 0, 0.5) 1px,
+      transparent 1px,
+      transparent 60px
+    ),
+    repeating-linear-gradient(
+      60deg,
+      rgba(255, 0, 0, 0.5),
+      rgba(255, 0, 0, 0.5) 1px,
+      transparent 1px,
+      transparent 60px
+    ),
+    linear-gradient(
+      60deg,
+      rgba(0, 0, 0, 0.1) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(0, 0, 0, 0.1) 75%,
+      rgba(0, 0, 0, 0.1)
+    ),
+    linear-gradient(
+      120deg,
+      rgba(0, 0, 0, 0.1) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(0, 0, 0, 0.1) 75%,
+      rgba(0, 0, 0, 0.1)
+    );
+  background-size: 35px 60px;
+  margin: calc(7vmin / 10);
+  border-radius: calc(14vmin / 20);
+  box-shadow: 0 calc(14vmin / 40) calc(14vmin / 10) 0 rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  float: right;
+  transition: transform 200ms linear, box-shadow 100ms linear;
+  transform: rotateY(0deg);
+}
+input:checked + label .cardWrapper {
+  transform: rotateY(180deg);
+}
+.cardRandom {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity 1ms linear 100ms;
+}
+.cardWrapper:hover {
+  filter: brightness(0.98);
+}
+input:focus + label .cardWrapper {
+  box-shadow: 0 0 calc(14vmin / 100) 0 rgba(0, 0, 0, 0.5);
+}
+input:checked + label .cardRandom {
+  opacity: 0;
+}
+.cardRandom::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://assets.codepen.io/2722301/cards.jpg);
+  background-size: cover;
+  animation: randomCard 1000ms steps(51, end) infinite;
+  animation-play-state: paused;
+  transform: rotate(180deg);
+}
+input:checked + label .cardRandom::before {
+  animation-play-state: running;
+}
+input {
+  height: 0;
+  width: 0;
+  border: none;
+  outline: none;
+  display: none;
+}
+@keyframes randomCard {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.linkElement {
+  position: absolute;
+  bottom: -40px;
+  font-family: sans-serif;
+  font-size: 20px;
+  color: #4069e1;
+  text-decoration: none;
+}
+.linkElement:hover {
+  filter: hue-rotate(-45deg);
+}
+		body{background-color: #BABABA;
+				  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+        cursor: url(wan.gif) 2 2, auto;}
+		h1,h2, p,footer, .wrap{margin: 0px;}
+		p{border-color: black; border-style: groove;
+			border-width: medium;}
+		h2{border-style: groove;
+			padding: 5px 5px 5px 5px;
+			text-align: center}
+		p{background-image: url(main.png);
+			background-size: 800px;}
+    a:link {color : yellow;
+  text-decoration: none;
+  font-family: Helvetica, Arial, sans-serif;}
+    a:visited {color : yellow;
+  text-decoration: none;
+  font-family: Helvetica, Arial, sans-serif;}
+		.wrap{width: 1120px; height: 604px;
+			margin: auto; border-color: black; border-style: ridge;
+			border-width: thick; padding: 10px 10px 10px 10px;}
+		.scrnLeft{width: 312px; height: 600px; float: left; display: flex;}
+		.scrnLeft-1{width: 262px; height: 600px; border-color: black; border-style: groove;
+			text-align: center;
+			background-color: #CEFF0A;}
+		.scrnLeft-2{position: relative;
+			left: 52px;
+			border-color: blue; border-width: 2px; border-style: dotted; width: 200px; background-color: #BABABA;}
+		.scrnRight{width: 800px; height: 600px; float: right;}
+		@keyframes color {
+			from {background-color: fuchsia;}
+			to{background-color: lime;}}
+		.change{animation-name: color;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;}
+    .bttn{border-style: outset;
+  // border: 0;
+  border-radius: 0;
+  color: yellow;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 150ms ease-in-out;
+  
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 100%;
+    background: white;
+    z-index: -1;
+    transition: width 150ms ease-in-out;
+  }
+  
+  &:hover {
+    color: #fff;
+    &:after {
+      width: 110%;
+    }
+  }
+}
+		.bttnCrd{font-family: Helvetica, Arial, sans-serif;
+			font-size: 1rem;
+			position: absolute;
+            left: 150px; 
+            top: 140px;}
+		.bttnProfile{background-color: transparent;
+			text-shadow: 1px 1px 1px #000;
+			color: yellow;
+			font-size: 1.5rem;
+			position: relative;
+            left: 437px; 
+            top: 170px;}
+        .bttnInsta{background-color: transparent;
+        	text-shadow: 1px 1px 1px #000;
+			color: yellow;
+			font-size: 1.5rem;
+			position: relative;
+            left: 80px; 
+            top: 510px;}
+        .bttnWorks{background-color: transparent;
+        	text-shadow: 1px 1px 1px #000;
+			color: yellow;
+			font-size: 1.5rem;
+			position: relative;
+            left: 60px; 
+            top: 200px;}
+        .bttnBox{background-color: transparent;
+        	text-shadow: 1px 1px 1px #000;
+			color: yellow;
+			font-size: 1.5rem;
+			position: relative;
+            left: 175px; 
+            top: 475px;}
+        .bttnPlaylist{background-color: transparent;
+        	text-shadow: 1px 1px 1px #000;
+			color: yellow;
+			font-size: 1.5rem;
+			position: relative;
+            left: 10px; 
+            top: 425px;}
+        .bttnContact{background-color: transparent;
+        	text-shadow: 1px 1px 1px #000;
+			color: yellow;
+			font-size: 1.5rem;
+			position: relative;
+            left: 20px; 
+            top: 400px;}
+        .sticker1{position: absolute;
+            left: -10px; 
+            top: 475px;
+            width: 300px;
+            z-index: 999;}
+        .sticker1:hover{
+        	animation: vibration 0.07s infinite;}
+        .sticker2{position: absolute;
+            left: 105px; 
+            top: 0px;
+            width: 300px;
+            z-index: 999;}
+        .sticker3{position: absolute;
+            left: 62px; 
+            top: -150px;
+            width: 112px;
+            z-index: 999;}
+        .banner{position: relative;
+            right: 0px; 
+            top: 0px;
+            width: 88px;}
+        .banbox{position: absolute;
+          width: 200px;
+          height: 700px;
+          float: right;
+          top: 100px;
+          right: 37px;
+          margin: auto;
+          text-align: center;}
+        .footfoot{text-align: center;
+        			color: blue;
+        			font-size: 0.7rem;
+        			padding-top: 42px;
+        			padding-bottom: 32px;
+        			line-height: 1.5;
+              font-family: "Times New Roman", Georgia, serif;}
+        .abouttxt{text-align: left;
+        			color: blue;
+        			font-size: 0.8rem;
+              padding-left: 25px;
+        			padding-top: 0px;
+        			padding-bottom: 0px;
+        			line-height: 1.5;
+              font-family: "Times New Roman", Georgia, serif;}
+        .abouttxt:hover{
+        transform: rotate(-5deg);}
+        .abouttxt2{text-align: left;
+        			color: blue;
+        			font-size: 1.5rem;
+              padding-left: 25px;
+        			padding-top: 0px;
+        			padding-bottom: 0px;
+        			line-height: 1.5;
+              font-family: "Times New Roman", Georgia, serif;}
+        .abouttxt2:hover{
+        transform: rotate(5deg);}
+        @keyframes vibration {
+		  from {
+		    transform: rotate(1.5deg);
+		  }
+		  to {
+		    transform: rotate(-1deg);
+		  }
+		}
+		.flow-text {
+	  display: flex;
+      flex: 0 0 auto;
+      white-space: nowrap;
+      overflow: hidden;
+      transition: 0.3s;
+      font-size: 2.5rem;
+      font-weight:bold;
+      color: #9D9993;
+      font-family: "Times New Roman", Georgia, serif;
+  }
+  .flow-text:hover {
+    color: yellow;
+  }
+  .flow-text:hover .flow-wrap {
+    animation-play-state: paused;
+    cursor: pointer;
+  }
+  .flow-wrap {
+    animation: textLoop 10s linear infinite;
+    padding-right: 1.4881vw;
+  }
+  
+  @keyframes textLoop {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+  .flow-containerTop{padding-top: 5px; padding-bottom: 15px;}
+   .flow-containerBttm{padding-top: 15px; padding-bottom: 15px;}
+   .mypic{width: 252px;
+   		padding-top: 4px;}
+	</style>
+</head>
+<body>
+	<div class="flow-containerTop">
+                <div class="flow-text">
+                    <div class="flow-wrap">&#x2660; &#x2663; &#x2665; &#x2666; &#xFF61;&#xB0;&#xB7; . welcome to my world &#x1DBB; &#x1D5D3; &#x10C01; .&#x141F;&#xFF61;&#xB7; .</div>
+                    <div class="flow-wrap">&#x2660; &#x2663; &#x2665; &#x2666; &#xFF61;&#xB0;&#xB7; . welcome to my world &#x1DBB; &#x1D5D3; &#x10C01; .&#x141F;&#xFF61;&#xB7; .</div>
+                    <div class="flow-wrap">&#x2660; &#x2663; &#x2665; &#x2666; &#xFF61;&#xB0;&#xB7; . welcome to my world &#x1DBB; &#x1D5D3; &#x10C01; .&#x141F;&#xFF61;&#xB7; .</div>
+                    <div class="flow-wrap">&#x2660; &#x2663; &#x2665; &#x2666; &#xFF61;&#xB0;&#xB7; . welcome to my world &#x1DBB; &#x1D5D3; &#x10C01; .&#x141F;&#xFF61;&#xB7; .</div> 
+                </div>
+            </div>
+	<div class="wrap">		
+		<div class="scrnLeft">
+			<div class="scrnLeft-1"> 
+				<img src="mypic.png" class="mypic">
+				<h3 class="abouttxt2 scrnLeft-2">潤承</h3>
+				<h3 class="abouttxt scrnLeft-2"> <br>
+        &#x2E;&#x141F; 환영합니다 &#x2E;&#x141F;<br>    여기는 제 홈페이지입니다.<br>가운데 메뉴에서<br>원하는 버튼을 클릭하세요.<br> <br>
+        </h3>
+        <a href="https://www.freecounterstat.com" title="website counter"><img src="https://counter4.optistats.ovh/private/freecounterstat.php?c=1gadhh1fmrtktznqelmthpzpdjanpcwl" border="0" title="website counter" alt="website counter"></a>
+			</div>
+		</div>
+		<p class="scrnRight change">
+			<button class="bttnProfile bttn" type="button"><a href="index4.html">profile</a></button>
+			<button class="bttnInsta bttn" type="button"><a href="https://www.instagram.com/melonw_owater" target="_blank">instagram</a></button>
+			<button class="bttnWorks bttn" type="button"><a href="index3.html">my works</a></button>
+			<button class="bttnBox bttn" type="button"><a href="index7.html">trinket box</a></button>
+			
+			<button class="bttnContact bttn" type="button"><a href="index5.html">contact</a></button>
+		</p>
+	</div>
+	<footer class="footfoot">
+		SEOUL, KOREA<br>2025 © brainrotmilk. ALL RIGHTS RESERVED.
+	</footer>
+	<img src="kid.png" class="sticker1">
+  <img src="pointy.png" class="sticker3">
+	<input type="checkbox" id="card_01" checked>
+		<label for="card_01">
+		  <div class="cardWrapper">
+		    <div class="cardRandom"></div>
+		  </div>
+		</label>
+	<button class="bttnCrd">Today's random card</button> 
+  <div class="banbox">
+  <img src="https://anlucas.neocities.org/2cows.gif" class="banner">
+  <img src="https://anlucas.neocities.org/263gggk.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/mobiles.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/blink-0.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/absfree.gif" class="banner">
+  <img src="https://anlucas.neocities.org/winmedia.gif" class="banner">
+  <img src="https://anlucas.neocities.org/send_this_page.gif" class="banner">
+  <img src="https://anlucas.neocities.org/freelist.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/nocookie.gif" class="banner">
+  <img src="https://anlucas.neocities.org/classicgaming.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/finger.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/gticon.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/cssdif.gif" class="banner">
+  <img src="https://anlucas.neocities.org/Ebay.gif" class="banner">
+ <img src="https://anlucas.neocities.org/nukeieani.gif" class="banner">
+  <img src="https://anlucas.neocities.org/hatemac.jpg" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/xp.gif" class="banner">
+  <img src="https://anlucas.neocities.org/bookmark_this_page.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/milktea.gif" class="banner">
+  <img src="https://owlman.neocities.org/OwlMan/Banners/98plusani.gif" class="banner">
+  <img src="https://anlucas.neocities.org/office97.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/nowebp.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/chrmevil.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/hasmile.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/duvigneaud_net.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/folder2.gif" class="banner">
+  <img src="https://anlucas.neocities.org/getacomp.jpg" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/gaywebring.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/diva.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/freakbutton.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/goblins.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/icw_ckm.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/iccsania.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/new-tab.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/slash.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/questions-comments.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/hurtsnow.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/imhigh.gif" class="banner">
+  <img src="https://cyber.dabamos.de/88x31/rainbow_bev.gif" class="banner">
+</div>
+	<div class="flow-containerBttm">
+                <div class="flow-text">
+                    <div class="flow-wrap">&#x2660; &#x2663; &#x2665; &#x2666; &#xFF61;&#xB0;&#xB7; . welcome to my world &#x1DBB; &#x1D5D3; &#x10C01; .&#x141F;&#xFF61;&#xB7; .</div>
+                    <div class="flow-wrap">&#x2660; &#x2663; &#x2665; &#x2666; &#xFF61;&#xB0;&#xB7; . welcome to my world &#x1DBB; &#x1D5D3; &#x10C01; .&#x141F;&#xFF61;&#xB7; .</div>
+                    <div class="flow-wrap">&#x2660; &#x2663; &#x2665; &#x2666; &#xFF61;&#xB0;&#xB7; . welcome to my world &#x1DBB; &#x1D5D3; &#x10C01; .&#x141F;&#xFF61;&#xB7; .</div>
+                    <div class="flow-wrap">&#x2660; &#x2663; &#x2665; &#x2666; &#xFF61;&#xB0;&#xB7; . welcome to my world &#x1DBB; &#x1D5D3; &#x10C01; .&#x141F;&#xFF61;&#xB7; .</div>  
+                </div>
+            </div>
+</body>
+</html>

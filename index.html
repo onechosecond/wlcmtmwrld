@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script type="module">
+  import { trailingCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
+
+  new trailingCursor();
+</script>
+
+	<title>knock knock</title>
+  <link rel="stylesheet" href="https://use.typekit.net/kig4srh.css">
+	<style>
+		body{background-color: blue;
+				  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;}
+		h1,h2,p{margin: 0px;}
+		p{position: absolute;
+            left: 862px; 
+            top: 575px;
+            width: 300px;
+            z-index: 999;
+            font-size: 3rem;
+            font-family: Helvetica, Arial, sans-serif;
+            color: yellow;
+            text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;}
+    h2{position: absolute;
+            left: 600px; 
+            top: 550px;
+            width: 300px;
+            z-index: 999;
+            font-size: 16rem;
+            font-family: Helvetica, Arial, sans-serif;
+            color: yellow;
+            text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+            rotate: 25deg;}
+    h3{position: absolute;
+      color: yellow;
+      font-size: 27rem;
+      font-family: "etna-xx-condensed", serif;
+      font-weight: 300;
+      font-style: normal;
+      top: -450px;
+      left: 700px;
+      z-index: 999;
+      text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+    }
+		.intro1{position: absolute;
+      z-index: 10;
+        top: -175px;
+        left: -50px;}
+    .intro2{position: absolute;
+      z-index: 10;
+        top: 750px;
+        left: 1000px;}
+    .change{animation-name: color;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;}
+        .door{position: absolute;
+          background-color: transparent;
+          z-index: 999;
+              left: 515px;
+              top: 657px;
+              width: 50px;
+              height: 90px;}
+        .color{position: absolute;
+          background-color: lime;
+          z-index: 1;
+              left: 505px;
+              top: 657px;
+              width: 60px;
+              height: 100px;}
+        .color2{position: absolute;
+          background-color: fuchsia;
+          z-index: 1;
+              left: 1000px;
+              top: 750px;
+              width: 475px;
+              height: 625px;}
+        @keyframes color {
+      from {background-color: lime;}
+      to{background-color: transparent;}}
+    .change{animation-name: color;
+      animation-duration: 0.5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;}
+      @keyframes ramen {
+        from {background-color: fuchsia;}
+        to {background-color: lime;}
+      }
+      .cupRamen{animation-name: ramen;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;}
+      .sticker1{position: absolute;
+                top: 50px;
+                left: 1000px;
+                z-index: 999;
+                width: 150px;
+                border-color: black;
+                border-style: solid;
+                border-width: 1px;}
+      .sticker2{position: absolute;
+                top: 1150px;
+                left: 500px;
+                z-index: 999;
+                width: 125px;
+                border-color: black;
+                border-style: solid;
+                border-width: 1px;}
+      .sticker3{position: absolute;
+                top: 125px;
+                left: 1437px;
+                z-index: 999;
+                width: 137px;
+                border-color: black;
+                border-style: solid;
+                border-width: 1px;}
+      .sticker4{position: absolute;
+                top: 575px;
+                left: 1300px;
+                z-index: 999;
+                width: 137px;
+                border-color: black;
+                border-style: solid;
+                border-width: 1px;}
+      .sticker5{position: absolute;
+                top: 537px;
+                left: 1500px;
+                z-index: 999;
+                width: 100px;
+              border-color: black;
+                border-style: solid;
+                border-width: 1px;}
+      .sticker6{position: absolute;
+                top: 0px;
+                left: 370px;
+                z-index: 999;
+                width: 125px;
+                border-color: black;
+                border-style: solid;
+                border-width: 1px;}
+      .sticker7{position: absolute;
+                top: 1362px;
+                left: 425px;
+                z-index: 999;
+                width: 137px;
+              border-color: black;
+                border-style: solid;
+                border-width: 1px;}
+      .sticker8{position: absolute;
+                top: 275px;
+                left: 1050px;
+                z-index: 999;
+                width: 150px;
+              border-color: black;
+                border-style: solid;
+                border-width: 1px;}
+      .sticker10{position: absolute;
+                top: 1250px;
+                left: 725px;
+                z-index: 999;
+                width: 100px;
+              border-color: black;
+                border-style: solid;
+                border-width: 1px;}
+      .touch:hover{
+        transform: rotate(5deg);}
+      .ttouch:hover{
+        transform: rotate(-5deg);}
+	</style>
+</head>
+<body>
+          <a href="index2.html"><div class="door">
+          </div></a>
+          <div class="color change">
+          </div>
+        <img src="intro1.png" class="intro1">
+        <h3>
+        WELCOME
+        </h3>
+        <p>
+        click here<br>to enter
+        </p>
+        <h2>
+        &#8601;
+        </h2>
+        <img src="intro2.png" class="intro2">
+        <div class="color2 cupRamen">
+          </div>
+        <img src="nemo1.jpg" class="sticker1 touch">
+        <img src="nemo2.JPG" class="sticker2 ttouch">
+        <img src="nemo3.JPG" class="sticker3 touch">
+        <img src="nemo4.jpg" class="sticker4 ttouch">
+        <img src="nemo5.jpg" class="sticker5 touch">
+        <img src="nemo10.jpg" class="sticker7 touch">
+        <img src="nemo8.JPG" class="sticker8 ttouch">
+        <img src="nemo7.jpg" class="sticker10 touch"> 
+</body>
+</html>
